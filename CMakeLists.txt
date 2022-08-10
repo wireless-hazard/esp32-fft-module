@@ -8,8 +8,10 @@ else()
 	set(COMPONENT_ADD_INCLUDEDIRS "include")
 
 	set(COMPONENT_PRIV_REQUIRES main)
+	set(COMPONENT_PRIV_REQUIRES esp32-fft-module)
 
-	register_component(fft)
+
+	register_component(esp32-fft-module)
 
 	component_compile_options(PUBLIC -DMPU_COMPONENT_TRUE=1)
 endif()
