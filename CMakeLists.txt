@@ -1,11 +1,11 @@
 if(DEFINED OFF_TARGET)
-	add_library(fft fft.c)
-	target_include_directories(fft PUBLIC ./)
+	add_library(fft "src/fft.c")
+	target_include_directories(fft PUBLIC "include")
 else()
 	set(COMPONENT_SRCS
-    	"fft.c")
+    	"src/fft.c")
 
-	set(COMPONENT_ADD_INCLUDEDIRS ".")
+	set(COMPONENT_ADD_INCLUDEDIRS "include")
 
 	set(COMPONENT_PRIV_REQUIRES main)
 
